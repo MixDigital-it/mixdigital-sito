@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>La tua demo · MixDigital</title>
+<meta name="description" content="Dicci chi sei: in un minuto prepariamo l'assistente WhatsApp della tua attività, con i tuoi servizi e i tuoi orari, e lo provi subito dal telefono.">
+<link rel="canonical" href="https://mixdigital.it/la-tua-demo/">
+<link rel="icon" href="../assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0c0c0d">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mixdigital.it/la-tua-demo/">
+<meta property="og:title" content="Prova l'assistente WhatsApp della tua attività">
+<meta property="og:description" content="In un minuto prepariamo un assistente che risponde come la tua segreteria. Poi lo provi su WhatsApp.">
+<meta property="og:image" content="https://mixdigital.it/assets/og-image.jpg">
+<meta property="og:locale" content="it_IT">
+<link rel="preload" href="../fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+  @font-face { font-family: "Bricolage"; src: url(../fonts/bricolage.woff2) format("woff2"); font-weight: 400 800; font-display: swap; }
+  @font-face { font-family: "Manrope"; src: url(../fonts/manrope.woff2) format("woff2"); font-weight: 400 700; font-display: swap; }
+  :root {
+    --canvas: #0c0c0d; --surface: #18181b; --surface-2: #222226; --ink: #f2f1ee; --ink-soft: #b7b4ac;
+    --accent: #e1ac10; --accent-ink: #0c0c0d; --line: #2c2c31; --errore: #ff8a7a; --ok: #7fd49b;
+    --display: "Bricolage", "Manrope", sans-serif; --text: "Manrope", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { font-family: var(--text); background: var(--canvas); color: var(--ink); line-height: 1.6; padding: 2.5rem 16px 4rem; }
+  main { max-width: 68rem; margin: 0 auto; }
+  a { color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: .18em; }
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+  .logo img { width: 120px; height: auto; display: block; }
+  header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: clamp(2.5rem, 7vw, 4.5rem); }
+  header a.torna { color: var(--ink-soft); text-decoration: none; font-size: .95rem; }
+  header a.torna:hover { color: var(--ink); }
+
+  .eyebrow { font-weight: 700; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+  h1 { font-family: var(--display); font-weight: 800; letter-spacing: -0.03em; line-height: 1.02; font-size: clamp(2.4rem, 7.5vw, 4.6rem); margin: .8rem 0 1.2rem; max-width: 16ch; text-wrap: balance; }
+  .lead { color: var(--ink-soft); font-size: clamp(1.05rem, 2.2vw, 1.25rem); max-width: 40rem; }
+  .lead strong { color: var(--ink); font-weight: 600; }
+
+  .griglia { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 3rem); margin-top: clamp(2.5rem, 6vw, 4rem); align-items: start; }
+  @media (max-width: 860px) { .griglia { grid-template-columns: 1fr; } }
+
+  .pannello { background: var(--surface); border: 1px solid var(--line); border-radius: 22px; padding: clamp(1.25rem, 3.5vw, 2rem); }
+  form { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 1.1rem; }
+  form[hidden] { display: none; }
+  .intero { grid-column: 1 / -1; }
+  @media (max-width: 560px) { form { grid-template-columns: 1fr; } }
+  label.campo { display: grid; gap: .35rem; font-weight: 600; font-size: .92rem; }
+  label.campo small { font-weight: 400; color: var(--ink-soft); }
+  input[type="text"], input[type="tel"], input[type="url"] {
+    font: inherit; font-size: 1rem; color: var(--ink); background: var(--canvas); border: 1px solid var(--line);
+    border-radius: 12px; min-height: 50px; padding: 0 14px; width: 100%;
+  }
+  input::placeholder { color: #6f6c66; }
+  input:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .trappola { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  .consenso { display: grid; grid-template-columns: auto 1fr; gap: .7rem; align-items: start; font-size: .88rem; color: var(--ink-soft); }
+  .consenso input { width: 20px; height: 20px; margin-top: .15rem; accent-color: var(--accent); }
+  .consenso strong { color: var(--ink); font-weight: 600; }
+
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 52px; padding: 0 22px; border-radius: 999px; background: var(--accent); color: var(--accent-ink); font-weight: 700; font-size: 1rem; text-decoration: none; border: 0; cursor: pointer; font-family: inherit; transition: background .2s, transform .1s; }
+  .btn:active { transform: scale(.97); }
+  @media (hover: hover) and (pointer: fine) { .btn:hover { background: var(--ink); } }
+  .btn[disabled], .btn[aria-disabled="true"] { background: var(--surface-2); color: var(--ink-soft); cursor: not-allowed; }
+  .messaggio { font-size: .92rem; min-height: 1.4em; }
+  .messaggio.errore { color: var(--errore); }
+
+  .passi { display: grid; gap: 1.1rem; counter-reset: passo; padding: 0; }
+  .passi li { list-style: none; counter-increment: passo; display: grid; grid-template-columns: 2.2rem 1fr; gap: .2rem .6rem; }
+  .passi li::before { content: counter(passo, decimal-leading-zero); font-family: var(--display); font-weight: 800; color: var(--accent); font-size: 1.1rem; grid-row: span 2; }
+  .passi strong { font-size: 1.02rem; }
+  .passi span { color: var(--ink-soft); font-size: .93rem; }
+  .passi code { font-family: inherit; font-weight: 700; color: var(--ink); background: var(--surface-2); padding: .05rem .4rem; border-radius: 6px; }
+
+  .stato { display: grid; gap: 1.1rem; }
+  .stato[hidden] { display: none; }
+  .stato h2 { font-family: var(--display); font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; font-size: clamp(1.5rem, 3.5vw, 2rem); }
+  .stato p { color: var(--ink-soft); }
+  .codice-demo { font-family: var(--display); font-weight: 800; font-size: 1.6rem; letter-spacing: .08em; color: var(--ink); }
+  .avanzamento { display: flex; align-items: center; gap: .7rem; font-weight: 600; }
+  .avanzamento .punto { width: 12px; height: 12px; border-radius: 50%; background: var(--accent); animation: pulsa 1.2s ease-in-out infinite; flex: none; }
+  .avanzamento.pronta .punto { background: var(--ok); animation: none; }
+  .avanzamento.errore .punto { background: var(--errore); animation: none; }
+  @keyframes pulsa { 50% { opacity: .25; transform: scale(.7); } }
+  @media (prefers-reduced-motion: reduce) { .avanzamento .punto { animation: none; } }
+  .qr { display: none; }
+  @media (hover: hover) and (pointer: fine) and (min-width: 900px) {
+    .qr { display: flex; align-items: center; gap: .9rem; color: var(--ink-soft); font-size: .85rem; }
+    .qr .codice { background: #fff; border-radius: 10px; padding: 6px; width: 104px; height: 104px; flex: none; }
+    .qr .codice svg { width: 100%; height: 100%; display: block; }
+  }
+
+  .nota { color: var(--ink-soft); font-size: .85rem; margin-top: 2.5rem; max-width: 46rem; }
+  footer { color: var(--ink-soft); font-size: .85rem; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; justify-content: space-between; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <a class="logo" href="../"><img src="../assets/logo-chiaro.png" width="546" height="190" alt="MixDigital, torna alla pagina principale"></a>
+    <a class="torna" href="../prova/">Demo d'esempio →</a>
+  </header>
+
+  <p class="eyebrow">Demo su misura</p>
+  <h1>Prova l'assistente WhatsApp della tua attività.</h1>
+  <p class="lead">Dicci chi sei: in un minuto prepariamo un assistente che risponde come la tua segreteria, <strong>con i tuoi servizi, i tuoi orari e il tuo staff</strong> presi dal web. Poi lo provi su WhatsApp come se fossi un tuo cliente.</p>
+
+  <div class="griglia">
+    <div class="pannello">
+      <form id="form" novalidate>
+        <label class="campo">Nome e cognome
+          <input type="text" name="nome" autocomplete="name" required maxlength="80">
+        </label>
+        <label class="campo">Cellulare
+          <input type="tel" name="telefono" autocomplete="tel" inputmode="tel" required maxlength="30" placeholder="333 123 4567">
+        </label>
+        <label class="campo">Nome dell'attività
+          <input type="text" name="attivita" autocomplete="organization" required maxlength="120" placeholder="Studio Dentistico Rossi">
+        </label>
+        <label class="campo">Città
+          <input type="text" name="citta" autocomplete="address-level2" required maxlength="80">
+        </label>
+        <label class="campo">Tipo di attività
+          <input type="text" name="tipo" list="tipi" maxlength="80" placeholder="es. centro estetico">
+          <datalist id="tipi">
+            <option value="Studio dentistico"><option value="Clinica veterinaria"><option value="Centro estetico">
+            <option value="Parrucchiere"><option value="Studio di fisioterapia"><option value="Autoscuola">
+            <option value="Poliambulatorio"><option value="Palestra o studio di pilates">
+          </datalist>
+        </label>
+        <label class="campo">Sito o pagina Facebook <small>(se ce l'hai)</small>
+          <input type="text" name="link" inputmode="url" maxlength="300" placeholder="www.tuosito.it">
+        </label>
+        <div class="trappola" aria-hidden="true"><label>Sito web <input type="text" name="sito_web" tabindex="-1" autocomplete="off"></label></div>
+
+        <label class="consenso intero">
+          <input type="checkbox" name="consensoRicontatto" required>
+          <span><strong>Acconsento a essere ricontattato da MixDigital su WhatsApp, per telefono o per email, per la demo e per informazioni sul servizio.</strong> Obbligatorio. <a href="../privacy.html">Privacy</a></span>
+        </label>
+        <label class="consenso intero">
+          <input type="checkbox" name="consensoChiamataIA">
+          <span>Acconsento a ricevere una chiamata dimostrativa da un assistente automatico con intelligenza artificiale di MixDigital. Facoltativo.</span>
+        </label>
+
+        <div class="intero">
+          <button class="btn" type="submit">Prepara la mia demo <span aria-hidden="true">→</span></button>
+        </div>
+        <p class="messaggio intero" id="messaggio" role="alert"></p>
+      </form>
+
+      <div class="stato" id="stato" hidden>
+        <div class="avanzamento" id="avanzamento"><span class="punto" aria-hidden="true"></span><span id="testo-stato">Sto cercando la tua attività sul web…</span></div>
+        <h2 id="titolo-stato">La demo di <span id="nome-attivita"></span> è in preparazione.</h2>
+        <p id="spiega-stato">Ci vuole circa un minuto. Puoi già aprire WhatsApp e mandare il messaggio con il codice: appena la demo è pronta ti scrivo io.</p>
+        <p>Il tuo codice: <span class="codice-demo" id="codice"></span></p>
+        <a class="btn" id="apri-wa" href="#" target="_blank" rel="noopener">Apri WhatsApp <span aria-hidden="true">→</span></a>
+        <div class="qr"><div class="codice" id="qr"></div><p>Dal computer? Inquadra il codice con il telefono.</p></div>
+      </div>
+    </div>
+
+    <ol class="passi">
+      <li><strong>Compili il form</strong><span>Bastano il nome dell'attività e la città. Il sito aiuta, ma non serve.</span></li>
+      <li><strong>Leggiamo i tuoi dati pubblici</strong><span>Sito, scheda Google e social: servizi, orari, persone, indirizzo. I prezzi solo se li hai pubblicati.</span></li>
+      <li><strong>Provi su WhatsApp</strong><span>Scrivi come un tuo cliente: chiedi informazioni, prenota, disdici. Con <code>MENU</code> vedi richiami, disdette e cosa riceveresti tu.</span></li>
+      <li><strong>Ti ricontattiamo</strong><span>Se ti piace, lo configuriamo sul numero WhatsApp che usi già, con la tua agenda vera.</span></li>
+    </ol>
+  </div>
+
+  <p class="nota">La demo usa un assistente con intelligenza artificiale e un'agenda d'esempio. Per prepararla usiamo solo informazioni pubbliche sulla tua attività. <a href="../privacy.html">Privacy</a>.</p>
+
+  <footer><span>© 2026 MixDigital</span><a href="mailto:info@mixdigital.it">info@mixdigital.it</a></footer>
+</main>
+
+<script src="../assets/qrcode.js"></script>
+<script>
+  // Indirizzo del server del bot e numero WhatsApp della demo (solo cifre, es. "393331234567").
+  // Finché uno dei due è vuoto il form resta disattivato. In locale si usa il bot sul PC
+  // e il numero si passa nell'indirizzo (?numero=...), per provare col sandbox di Kapso.
+  const LOCALE = location.hostname === "localhost" || location.hostname === "127.0.0.1";
+  const API_DEMO = LOCALE ? "http://localhost:8787" : "";
+  const NUMERO_DEMO = (LOCALE && new URLSearchParams(location.search).get("numero")) || "";
+
+  const form = document.getElementById("form");
+  const messaggio = document.getElementById("messaggio");
+  const invia = form.querySelector("button[type=submit]");
+
+  if (!API_DEMO || !NUMERO_DEMO) {
+    invia.disabled = true;
+    invia.textContent = "Demo su misura in arrivo";
+  }
+
+  form.addEventListener("submit", async (ev) => {
+    ev.preventDefault();
+    messaggio.className = "messaggio intero";
+    messaggio.textContent = "";
+    const dati = Object.fromEntries(new FormData(form));
+    dati.consensoRicontatto = form.consensoRicontatto.checked;
+    dati.consensoChiamataIA = form.consensoChiamataIA.checked;
+    const mancanti = ["nome", "telefono", "attivita", "citta"].filter((c) => !String(dati[c] || "").trim());
+    if (mancanti.length) return errore("Scrivi il tuo nome, il cellulare, il nome dell'attività e la città.", form[mancanti[0]]);
+    if (!dati.consensoRicontatto) return errore("Per ricevere la demo serve il consenso a essere ricontattato.", form.consensoRicontatto);
+
+    invia.disabled = true;
+    invia.textContent = "Invio…";
+    try {
+      const r = await fetch(`${API_DEMO}/demo`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(dati) });
+      const corpo = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error(corpo.errore || "Qualcosa non ha funzionato. Riprova tra poco.");
+      mostra(corpo);
+    } catch (e) {
+      invia.disabled = false;
+      invia.innerHTML = 'Prepara la mia demo <span aria-hidden="true">→</span>';
+      errore(e instanceof TypeError ? "Non riesco a raggiungere il server. Riprova tra poco." : e.message);
+    }
+  });
+
+  function errore(testo, campo) {
+    messaggio.className = "messaggio intero errore";
+    messaggio.textContent = testo;
+    campo?.focus();
+  }
+
+  function mostra(demo) {
+    form.hidden = true;
+    document.getElementById("stato").hidden = false;
+    document.getElementById("nome-attivita").textContent = demo.attivita;
+    document.getElementById("codice").textContent = demo.codice;
+    const url = `https://wa.me/${NUMERO_DEMO}?text=${encodeURIComponent(`DEMO ${demo.codice}`)}`;
+    document.getElementById("apri-wa").href = url;
+    try {
+      const qr = qrcode(0, "M");
+      qr.addData(url);
+      qr.make();
+      document.getElementById("qr").innerHTML = qr.createSvgTag({ cellSize: 3, margin: 0, scalable: true, alt: "Codice QR per aprire la demo su WhatsApp" });
+    } catch {
+      document.querySelector(".stato .qr").remove();
+    }
+    document.getElementById("titolo-stato").focus?.();
+    aggiorna(demo);
+    if (demo.stato === "in_preparazione") segui(demo.codice, Date.now());
+  }
+
+  // Controlla ogni 3 secondi per al massimo 4 minuti.
+  async function segui(codice, inizio) {
+    const frasi = ["Sto cercando la tua attività sul web…", "Leggo servizi e orari…", "Preparo l'agenda e le risposte…", "Ancora qualche secondo…"];
+    const giri = Math.floor((Date.now() - inizio) / 3000);
+    document.getElementById("testo-stato").textContent = frasi[Math.min(Math.floor(giri / 5), frasi.length - 1)];
+    if (Date.now() - inizio > 240000) return;
+    await new Promise((ok) => setTimeout(ok, 3000));
+    try {
+      const r = await fetch(`${API_DEMO}/demo/${codice}`);
+      const demo = await r.json();
+      if (demo.stato !== "in_preparazione") return aggiorna(demo);
+    } catch {
+      // Rete instabile: si riprova al giro dopo.
+    }
+    segui(codice, inizio);
+  }
+
+  function aggiorna(demo) {
+    const av = document.getElementById("avanzamento");
+    const nome = document.getElementById("nome-attivita");
+    if (demo.stato === "pronta") {
+      av.className = "avanzamento pronta";
+      document.getElementById("testo-stato").textContent = demo.trovata ? "Demo pronta, con i dati trovati online" : "Demo pronta (abbiamo trovato pochi dati: alcune cose sono d'esempio)";
+      document.getElementById("titolo-stato").replaceChildren("La demo di ", nome, " è pronta.");
+      document.getElementById("spiega-stato").textContent = "Apri WhatsApp e invia il messaggio con il codice. Poi scrivi come se fossi un tuo cliente.";
+    } else if (demo.stato === "errore") {
+      av.className = "avanzamento errore";
+      document.getElementById("testo-stato").textContent = "Qualcosa non ha funzionato";
+      document.getElementById("titolo-stato").textContent = "Non siamo riusciti a preparare la demo.";
+      document.getElementById("spiega-stato").textContent = "Ti ricontattiamo noi a breve. Intanto puoi provare le demo d'esempio.";
+      const wa = document.getElementById("apri-wa");
+      wa.href = "../prova/";
+      wa.removeAttribute("target");
+      wa.innerHTML = 'Demo d\'esempio <span aria-hidden="true">→</span>';
+      document.querySelector(".stato .qr")?.remove();
+      document.querySelector(".codice-demo").parentElement.remove();
+    }
+  }
+</script>
+</body>
+</html>
