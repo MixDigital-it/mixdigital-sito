@@ -181,8 +181,8 @@
   // Finché uno dei due è vuoto il form resta disattivato. In locale si usa il bot sul PC
   // e il numero si passa nell'indirizzo (?numero=...), per provare col sandbox di Kapso.
   const LOCALE = location.hostname === "localhost" || location.hostname === "127.0.0.1";
-  const API_DEMO = LOCALE ? "http://localhost:8787" : "";
-  const NUMERO_DEMO = (LOCALE && new URLSearchParams(location.search).get("numero")) || "";
+  const API_DEMO = LOCALE ? "http://localhost:8787" : "https://assistente.mixdigital.it";
+  const NUMERO_DEMO = (LOCALE && new URLSearchParams(location.search).get("numero")) || "393522752685";
 
   const form = document.getElementById("form");
   const messaggio = document.getElementById("messaggio");
