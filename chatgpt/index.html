@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>La tua attività su ChatGPT: guida gratuita · MixDigital</title>
+<meta name="description" content="Dal 10 novembre 2026 ChatGPT ha le schede delle attività, come Google Business Profile. Cosa sono, cosa si può già fare in Italia, come controllare cosa dice ChatGPT di te e come prepararti.">
+<link rel="canonical" href="https://mixdigital.it/chatgpt/">
+<link rel="icon" href="../assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0c0c0d">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://mixdigital.it/chatgpt/">
+<meta property="og:title" content="La tua attività su ChatGPT: la guida gratuita">
+<meta property="og:description" content="Cosa sono le schede delle attività su ChatGPT, cosa si può già fare in Italia e come prepararsi. Aggiornata al 12 novembre 2026.">
+<meta property="og:image" content="https://mixdigital.it/assets/og-image.jpg">
+<meta property="og:locale" content="it_IT">
+<link rel="preload" href="../fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "@id": "https://mixdigital.it/chatgpt/#guida", "headline": "La tua attività su ChatGPT: la guida gratuita", "description": "Cosa sono le schede delle attività su ChatGPT (Business Hub), cosa si può già fare in Italia e come prepararsi.", "inLanguage": "it-IT", "datePublished": "2026-11-12", "dateModified": "2026-11-12", "image": "https://mixdigital.it/assets/og-image.jpg", "mainEntityOfPage": "https://mixdigital.it/chatgpt/", "author": {"@id": "https://mixdigital.it/#org"}, "publisher": {"@type": "Organization", "@id": "https://mixdigital.it/#org", "name": "MixDigital", "logo": {"@type": "ImageObject", "url": "https://mixdigital.it/assets/logo.png"}}}]}</script>
+<style>
+  @font-face { font-family: "Bricolage"; src: url(../fonts/bricolage.woff2) format("woff2"); font-weight: 400 800; font-display: swap; }
+  @font-face { font-family: "Manrope"; src: url(../fonts/manrope.woff2) format("woff2"); font-weight: 400 700; font-display: swap; }
+  :root {
+    --canvas: #0c0c0d; --surface: #18181b; --surface-2: #222226; --ink: #f2f1ee; --ink-soft: #b7b4ac;
+    --accent: #e1ac10; --accent-ink: #0c0c0d; --blu: #24338f; --line: #2c2c31; --errore: #ff8a7a; --ok: #7fd49b;
+    --display: "Bricolage", "Manrope", sans-serif; --text: "Manrope", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 1.5rem; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { font-family: var(--text); background: var(--canvas); color: var(--ink); line-height: 1.65; padding: 2.5rem 16px 4rem; }
+  .pagina { max-width: 72rem; margin: 0 auto; }
+  a { color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: .18em; }
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+  .logo img { width: 120px; height: auto; display: block; }
+  header.top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: clamp(2.5rem, 7vw, 4.5rem); }
+  header.top a.torna { color: var(--ink-soft); text-decoration: none; font-size: .95rem; }
+  header.top a.torna:hover { color: var(--ink); }
+
+  .eyebrow { font-weight: 700; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+  h1 { font-family: var(--display); font-weight: 800; letter-spacing: -0.03em; line-height: 1.02; font-size: clamp(2.5rem, 8vw, 5rem); margin: 0 0 1.2rem; max-width: 14ch; text-wrap: balance; }
+  .lead { color: var(--ink-soft); font-size: clamp(1.08rem, 2.2vw, 1.3rem); max-width: 42rem; }
+  .lead strong { color: var(--ink); font-weight: 600; }
+  .azioni-intro { display: flex; flex-wrap: wrap; gap: .8rem 1.4rem; align-items: center; margin-top: 1.8rem; }
+  .azioni-intro .meta { color: var(--ink-soft); font-size: .9rem; }
+
+  .breve { margin-top: clamp(2.5rem, 6vw, 3.5rem); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; padding: 0; }
+  @media (max-width: 820px) { .breve { grid-template-columns: 1fr; } }
+  .breve li { list-style: none; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 1.2rem 1.25rem; }
+  .breve li strong { display: block; font-family: var(--display); font-size: 1.15rem; letter-spacing: -0.01em; line-height: 1.2; margin-bottom: .35rem; }
+  .breve li span { color: var(--ink-soft); font-size: .95rem; }
+  .breve li.no strong { color: var(--errore); }
+  .breve li.si strong { color: var(--ok); }
+
+  .corpo { display: grid; grid-template-columns: 14rem minmax(0, 1fr); gap: clamp(2rem, 5vw, 4rem); margin-top: clamp(3rem, 8vw, 5rem); align-items: start; }
+  @media (max-width: 900px) { .corpo { grid-template-columns: 1fr; } .indice { display: none; } }
+  .indice { position: sticky; top: 1.5rem; font-size: .9rem; }
+  .indice p { font-weight: 700; color: var(--ink-soft); font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; margin-bottom: .8rem; }
+  .indice ol { padding: 0; display: grid; gap: .15rem; counter-reset: voce; }
+  .indice li { list-style: none; counter-increment: voce; }
+  .indice ol a { display: grid; grid-template-columns: 1.6rem 1fr; padding: .35rem .5rem; border-radius: 8px; color: var(--ink-soft); text-decoration: none; }
+  .indice ol a::before { content: counter(voce); color: var(--accent); font-weight: 700; }
+  .indice ol a:hover, .indice ol a.attiva { color: var(--ink); background: var(--surface); }
+  .indice .iscriviti { margin-top: 1rem; display: inline-flex; }
+
+  article { max-width: 44rem; }
+  article section { padding-bottom: clamp(2.5rem, 6vw, 3.5rem); }
+  article section + section { border-top: 1px solid var(--line); padding-top: clamp(2.5rem, 6vw, 3.5rem); }
+  .num { font-family: var(--display); font-weight: 800; color: var(--accent); font-size: 1rem; }
+  h2 { font-family: var(--display); font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; font-size: clamp(1.7rem, 4vw, 2.4rem); margin: .3rem 0 1rem; text-wrap: balance; }
+  h3 { font-family: var(--display); font-weight: 700; letter-spacing: -0.01em; font-size: 1.2rem; margin: 1.8rem 0 .6rem; }
+  article p { color: #d9d6ce; margin-bottom: 1rem; }
+  article p strong, article li strong { color: var(--ink); }
+  article ul, article ol { color: #d9d6ce; padding-left: 1.2rem; display: grid; gap: .5rem; margin-bottom: 1rem; }
+
+  .stato { display: grid; gap: .75rem; margin: 1.4rem 0; padding: 0; }
+  .stato li { list-style: none; display: grid; grid-template-columns: auto 1fr; gap: .2rem 1rem; align-items: start; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 1rem 1.15rem; }
+  .stato .etichetta { grid-row: span 2; font-weight: 700; font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; border-radius: 999px; padding: .25rem .7rem; margin-top: .15rem; white-space: nowrap; }
+  .etichetta.no { background: rgba(255, 138, 122, .14); color: var(--errore); }
+  .etichetta.si { background: rgba(127, 212, 155, .14); color: var(--ok); }
+  .etichetta.usa { background: var(--surface-2); color: var(--ink-soft); }
+  .stato strong { color: var(--ink); }
+  .stato span.dett { color: var(--ink-soft); font-size: .95rem; }
+  @media (max-width: 520px) { .stato li { grid-template-columns: 1fr; } .stato .etichetta { grid-row: auto; justify-self: start; } }
+
+  .citazione { border-left: 3px solid var(--accent); padding: .2rem 0 .2rem 1rem; color: var(--ink); font-style: italic; margin: 1.2rem 0; }
+  .citazione small { display: block; font-style: normal; color: var(--ink-soft); margin-top: .3rem; }
+
+  .prova { background: var(--surface); border: 1px solid var(--line); border-radius: 22px; padding: clamp(1.2rem, 3.5vw, 1.8rem); margin: 1.4rem 0; }
+  .prova .campi { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .8rem; margin-bottom: 1.3rem; }
+  @media (max-width: 640px) { .prova .campi { grid-template-columns: 1fr; } }
+  .domande { display: grid; gap: .7rem; padding: 0; }
+  .domande li { list-style: none; display: grid; grid-template-columns: 1fr auto; gap: .8rem; align-items: center; background: var(--canvas); border: 1px solid var(--line); border-radius: 14px; padding: .8rem .8rem .8rem 1rem; }
+  .domande q { quotes: none; color: var(--ink); font-size: .98rem; }
+  .domande q b { color: var(--accent); font-weight: 700; }
+  .copia { font: inherit; font-size: .85rem; font-weight: 700; color: var(--ink); background: var(--surface-2); border: 1px solid var(--line); border-radius: 999px; min-height: 40px; padding: 0 14px; cursor: pointer; white-space: nowrap; }
+  .copia:hover { border-color: var(--accent); }
+  .copia.fatto { color: var(--ok); border-color: var(--ok); }
+
+  .lista-spunte { padding: 0 !important; }
+  .lista-spunte li { list-style: none; display: grid; grid-template-columns: 1.6rem 1fr; gap: .4rem; }
+  .lista-spunte li::before { content: ""; width: 1.05rem; height: 1.05rem; margin-top: .3rem; border-radius: 5px; border: 2px solid var(--accent); }
+
+  .passi { display: grid; gap: 1.1rem; counter-reset: passo; padding: 0 !important; margin: 1.2rem 0; }
+  .passi li { list-style: none; counter-increment: passo; display: grid; grid-template-columns: 2.4rem 1fr; gap: .1rem .6rem; }
+  .passi li::before { content: counter(passo, decimal-leading-zero); font-family: var(--display); font-weight: 800; color: var(--accent); font-size: 1.1rem; grid-row: span 2; }
+  .passi strong { color: var(--ink); }
+  .passi span { color: var(--ink-soft); font-size: .96rem; }
+
+  details { border-bottom: 1px solid var(--line); }
+  details:first-of-type { border-top: 1px solid var(--line); }
+  summary { cursor: pointer; list-style: none; padding: 1rem 2.2rem 1rem 0; font-weight: 700; color: var(--ink); position: relative; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; position: absolute; right: .3rem; top: .75rem; font-size: 1.4rem; color: var(--accent); font-weight: 400; }
+  details[open] summary::after { content: "–"; }
+  details p { padding-bottom: .4rem; }
+
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 52px; padding: 0 22px; border-radius: 999px; background: var(--accent); color: var(--accent-ink); font-weight: 700; font-size: 1rem; text-decoration: none; border: 0; cursor: pointer; font-family: inherit; transition: background .2s, transform .1s; }
+  .btn:active { transform: scale(.97); }
+  @media (hover: hover) and (pointer: fine) { .btn:hover { background: var(--ink); } }
+  .btn[disabled] { background: var(--surface-2); color: var(--ink-soft); cursor: wait; }
+  .btn.piccolo { min-height: 44px; font-size: .92rem; padding: 0 18px; }
+
+  /* Lista d'attesa */
+  .attesa { margin-top: clamp(3rem, 8vw, 5rem); background: linear-gradient(135deg, rgba(225, 172, 16, .14), rgba(36, 51, 143, .22)); border: 1px solid #3a3424; border-radius: 28px; padding: clamp(1.5rem, 5vw, 3rem); display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(1.5rem, 5vw, 3.5rem); align-items: start; }
+  @media (max-width: 900px) { .attesa { grid-template-columns: 1fr; } }
+  .attesa h2 { font-size: clamp(1.9rem, 4.5vw, 2.8rem); }
+  .attesa .testo p { color: #d9d6ce; margin-bottom: 1rem; }
+  .attesa .testo ul { color: #d9d6ce; padding-left: 1.2rem; display: grid; gap: .4rem; }
+  form { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 1.1rem; background: var(--canvas); border: 1px solid var(--line); border-radius: 20px; padding: clamp(1.1rem, 3vw, 1.6rem); }
+  form[hidden] { display: none; }
+  .intero { grid-column: 1 / -1; }
+  @media (max-width: 560px) { form { grid-template-columns: 1fr; } }
+  label.campo { display: grid; gap: .35rem; font-weight: 600; font-size: .92rem; }
+  label.campo small { font-weight: 400; color: var(--ink-soft); }
+  input[type="text"], input[type="tel"], input[type="email"] {
+    font: inherit; font-size: 1rem; color: var(--ink); background: var(--surface); border: 1px solid var(--line);
+    border-radius: 12px; min-height: 50px; padding: 0 14px; width: 100%;
+  }
+  .prova input[type="text"] { background: var(--canvas); }
+  input::placeholder { color: #8d8a83; }
+  input:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+  fieldset { border: 0; padding: 0; display: grid; gap: .5rem; }
+  legend { font-weight: 600; font-size: .92rem; margin-bottom: .4rem; }
+  .scelte { display: flex; flex-wrap: wrap; gap: .6rem; }
+  .scelta { position: relative; }
+  .scelta input { position: absolute; opacity: 0; inset: 0; }
+  .scelta span { display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); font-size: .93rem; cursor: pointer; }
+  .scelta input:checked + span { border-color: var(--accent); color: var(--accent); background: rgba(225, 172, 16, .1); }
+  .scelta input:focus-visible + span { outline: 3px solid var(--accent); outline-offset: 2px; }
+  .trappola { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  .consenso { display: grid; grid-template-columns: auto 1fr; gap: .7rem; align-items: start; font-size: .88rem; color: var(--ink-soft); }
+  .consenso input { width: 20px; height: 20px; margin-top: .15rem; accent-color: var(--accent); }
+  .consenso strong { color: var(--ink); font-weight: 600; }
+  .messaggio { font-size: .92rem; min-height: 1.4em; }
+  .messaggio.errore { color: var(--errore); }
+  .fatto-box { background: var(--canvas); border: 1px solid var(--line); border-radius: 20px; padding: clamp(1.2rem, 3vw, 1.8rem); display: grid; gap: .8rem; }
+  .fatto-box[hidden] { display: none; }
+  .fatto-box h3 { margin: 0; font-size: 1.5rem; color: var(--ok); }
+  .fatto-box p { color: #d9d6ce; }
+
+  .nota { color: var(--ink-soft); font-size: .85rem; margin-top: 2.5rem; max-width: 48rem; }
+  footer { color: var(--ink-soft); font-size: .85rem; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; justify-content: space-between; }
+</style>
+</head>
+<body>
+<div class="pagina">
+  <header class="top">
+    <a class="logo" href="../"><img src="../assets/logo-chiaro.png" width="546" height="190" alt="MixDigital, torna alla pagina principale"></a>
+    <a class="torna" href="#lista">Lista d'attesa →</a>
+  </header>
+
+  <h1>La tua attività su ChatGPT.</h1>
+  <p class="lead">Dal 10 novembre 2026 ChatGPT ha le sue <strong>schede delle attività</strong>, un po' come Google Business Profile. Qui trovi cosa sono, cosa si può già fare in Italia, come controllare cosa dice ChatGPT di te e come prepararti.</p>
+  <div class="azioni-intro">
+    <a class="btn" href="#lista">Avvisatemi quando arriva in Italia</a>
+    <span class="meta">Guida gratuita · aggiornata al 12 novembre 2026 · 7 minuti di lettura</span>
+  </div>
+
+  <ul class="breve">
+    <li><strong>Le schede esistono già</strong><span>ChatGPT parla delle attività usando quello che trova online, anche se non hai mai fatto nulla.</span></li>
+    <li class="no"><strong>Negozi e locali italiani: non ancora</strong><span>Per ora OpenAI fa rivendicare a negozi e ristoranti solo schede degli Stati Uniti.</span></li>
+    <li class="si"><strong>Puoi prepararti oggi</strong><span>Controlla cosa dice di te e sistema i tuoi dati online: è la parte che conta di più.</span></li>
+  </ul>
+
+  <div class="corpo">
+    <nav class="indice" aria-label="Indice della guida">
+      <p>In questa guida</p>
+      <ol>
+        <li><a href="#cos-e">Cos'è</a></li>
+        <li><a href="#italia">In Italia si può già?</a></li>
+        <li><a href="#prova">Cosa dice ChatGPT di te</a></li>
+        <li><a href="#prepararsi">Come prepararsi</a></li>
+        <li><a href="#passi">Come si rivendica</a></li>
+        <li><a href="#attenzione">Cosa non fa</a></li>
+        <li><a href="#domande">Domande</a></li>
+      </ol>
+      <a class="btn piccolo iscriviti" href="#lista">Lista d'attesa</a>
+    </nav>
+
+    <article>
+      <section id="cos-e">
+        <span class="num">01</span>
+        <h2>Cos'è il Business Hub di ChatGPT</h2>
+        <p>Si chiama <strong>Businesses in ChatGPT</strong> ed è in prova (beta) dal 10 novembre 2026. Si gestisce dal <strong>Business Hub</strong>, che si apre dalla barra laterale di ChatGPT.</p>
+        <p>Chi possiede un'attività, o è autorizzato a rappresentarla, può <strong>rivendicarne la scheda</strong>: dimostra che l'attività è sua, corregge le informazioni e vede quante volte ChatGPT la nomina. Per ora è <strong>gratis</strong> e non serve fare pubblicità.</p>
+        <p>Il punto da capire è questo: quando qualcuno chiede a ChatGPT «un buon parrucchiere a Bari» o «la pizzeria Da Gino è aperta domenica?», ChatGPT risponde comunque, con quello che trova online. Rivendicare la scheda serve a fare in modo che quello che dice di te sia giusto.</p>
+      </section>
+
+      <section id="italia">
+        <span class="num">02</span>
+        <h2>In Italia si può già usare?</h2>
+        <p>Dipende dal tipo di attività. Questa è la situazione al 12 novembre 2026:</p>
+        <ul class="stato">
+          <li><span class="etichetta no">Non ancora</span><strong>Negozi, ristoranti, bar, studi, attività con una sede</strong><span class="dett">Si possono rivendicare solo schede che esistono già negli Stati Uniti.</span></li>
+          <li><span class="etichetta si">Sì</span><strong>Attività online, con un sito (e-commerce, servizi online)</strong><span class="dett">Puoi cercarla nel Business Hub e, se non c'è, aggiungerla.</span></li>
+          <li><span class="etichetta usa">Solo USA</span><strong>Assistente dell'attività dentro ChatGPT (Business Agent)</strong><span class="dett">Un chatbot che risponde sui tuoi prodotti: solo e-commerce e servizi online negli Stati Uniti.</span></li>
+        </ul>
+        <p class="citazione">«Local stores and restaurants can currently claim only an existing U.S. listing.»<small>Centro assistenza di OpenAI, «Setting up your business on ChatGPT»</small></p>
+        <p>Alcuni articoli dicono che «da oggi» in Italia si può rivendicare la scheda: per le attività con una sede, la guida ufficiale di OpenAI dice di no. OpenAI non ha dato una data per l'Italia. Questa pagina la teniamo aggiornata, e se ti <a href="#lista">iscrivi alla lista</a> ti scriviamo noi quando cambia.</p>
+      </section>
+
+      <section id="prova">
+        <span class="num">03</span>
+        <h2>Cosa dice ChatGPT di te, oggi</h2>
+        <p>Ci vogliono cinque minuti. Apri ChatGPT in una <strong>chat nuova</strong>, meglio senza accedere al tuo account o in una finestra in incognito, così la risposta non dipende da quello che ChatGPT sa già di te. Scrivi i tuoi dati qui sotto: le domande si compilano da sole e le copi con un tocco.</p>
+
+        <div class="prova">
+          <div class="campi">
+            <label class="campo">Nome dell'attività
+              <input type="text" id="p-nome" placeholder="Pizzeria Da Gino" maxlength="80" autocomplete="organization">
+            </label>
+            <label class="campo">Città o quartiere
+              <input type="text" id="p-citta" placeholder="Asti" maxlength="60" autocomplete="address-level2">
+            </label>
+            <label class="campo">Che attività è
+              <input type="text" id="p-tipo" placeholder="pizzeria" maxlength="60">
+            </label>
+          </div>
+          <ol class="domande" id="domande">
+            <li><q data-modello="Cosa sai di {nome} a {citta}? Dimmi indirizzo, telefono, orari e servizi."></q><button class="copia" type="button">Copia</button></li>
+            <li><q data-modello="Cerco {tipo} a {citta}: chi mi consigli e perché?"></q><button class="copia" type="button">Copia</button></li>
+            <li><q data-modello="{nome} a {citta} è aperto la domenica? A che ora chiude?"></q><button class="copia" type="button">Copia</button></li>
+            <li><q data-modello="Cosa dicono le recensioni di {nome} a {citta}? Da dove prendi queste informazioni?"></q><button class="copia" type="button">Copia</button></li>
+          </ol>
+        </div>
+
+        <p>Mentre leggi le risposte, segnati:</p>
+        <ul>
+          <li><strong>i dati sbagliati</strong>: orari vecchi, un telefono che non usi più, un indirizzo di prima del trasloco;</li>
+          <li><strong>quello che manca</strong>: servizi che fai e che ChatGPT non cita;</li>
+          <li><strong>se compari nei consigli</strong>, e quali concorrenti escono al posto tuo;</li>
+          <li><strong>i siti che cita come fonti</strong>: sono quelli da sistemare per primi.</li>
+        </ul>
+        <p>Le risposte cambiano da una prova all'altra: ripeti ogni domanda due o tre volte prima di trarre conclusioni.</p>
+      </section>
+
+      <section id="prepararsi">
+        <span class="num">04</span>
+        <h2>Come prepararsi adesso</h2>
+        <p>OpenAI non dice da dove prende i dati delle attività locali, e avverte che anche dopo aver rivendicato la scheda ChatGPT può usare <strong>altre fonti</strong>. Quindi la cosa più utile si può fare già oggi: avere dati giusti e uguali dappertutto.</p>
+
+        <h3>I tuoi dati, uguali ovunque</h3>
+        <ul class="lista-spunte">
+          <li><span><strong>Nome, indirizzo e telefono scritti allo stesso modo</strong> su sito, scheda Google, Facebook, Instagram, TripAdvisor, PagineGialle e le altre directory dove compari.</span></li>
+          <li><span><strong>Orari aggiornati</strong> dappertutto, compresi festivi, ferie e orari estivi.</span></li>
+          <li><span><strong>Sul sito, indirizzo, orari e servizi scritti come testo</strong>, non solo dentro una foto o un PDF del menu: il testo si legge, l'immagine spesso no.</span></li>
+          <li><span><strong>Una descrizione chiara</strong> di cosa fai, per chi e in quale città, sul sito e sulle schede.</span></li>
+          <li><span><strong>Le schede che dimentichi</strong>: Bing Places, Apple Business Connect, vecchie pagine Facebook doppie. Correggile o chiudile.</span></li>
+        </ul>
+
+        <h3>Quello che ti servirà per la verifica</h3>
+        <ul class="lista-spunte">
+          <li><span><strong>Il telefono della scheda</strong>, per ricevere un codice via SMS o con una chiamata automatica. Se è un fisso, scegli la chiamata.</span></li>
+          <li><span>In alternativa, <strong>l'email associata all'attività</strong> oppure <strong>l'accesso al DNS del tuo dominio</strong> (se il sito te lo gestisce qualcun altro, chiedi a lui).</span></li>
+          <li><span><strong>Un documento d'identità e i dati dell'impresa</strong> (visura, partita IVA): nome, indirizzo e numero di registrazione devono corrispondere ai registri ufficiali.</span></li>
+          <li><span><strong>Un account ChatGPT dell'attività</strong>, non quello personale: la scheda la gestisce l'account con cui la rivendichi. I collaboratori si aggiungono dopo.</span></li>
+        </ul>
+      </section>
+
+      <section id="passi">
+        <span class="num">05</span>
+        <h2>Come si rivendica la scheda</h2>
+        <p>Sono i passi della guida ufficiale di OpenAI. Per le attività online valgono già oggi, per quelle con una sede in Italia varranno quando apriranno.</p>
+        <ol class="passi">
+          <li><strong>Apri il Business Hub</strong><span>Accedi a ChatGPT, apri Business Hub dalla barra laterale e cerca la tua attività per nome.</span></li>
+          <li><strong>Scegli la scheda giusta</strong><span>Seleziona quella che corrisponde e conferma l'account ChatGPT con cui la gestirai.</span></li>
+          <li><strong>Dimostra che è tua</strong><span>Con un codice al telefono o all'email dell'attività, con un record TXT nel DNS del dominio oppure collegando il negozio Shopify.</span></li>
+          <li><strong>Aspetta l'approvazione</strong><span>OpenAI esamina la richiesta e ti risponde per email, a volte chiedendo altre informazioni.</span></li>
+          <li><strong>Verifica la tua identità con Persona</strong><span>Serve per pubblicare modifiche e vedere le statistiche. Quando è approvata, la scheda prende la spunta blu.</span></li>
+          <li><strong>Sistema le informazioni</strong><span>Sito, descrizione, categoria, logo, foto di copertina e altri dettagli. Ogni modifica la controlla OpenAI prima che compaia.</span></li>
+        </ol>
+        <h3>Le statistiche</h3>
+        <p>Dopo la verifica vedi gli ultimi 28 giorni: le <strong>menzioni</strong> (per un'attività con sede, quante volte ChatGPT ha mostrato la tua scheda nei risultati, anche se nessuno l'ha aperta), i <strong>clic verso il tuo sito</strong> e i <strong>temi</strong> delle risposte in cui compari. Le domande delle persone e le loro chat non le vedi mai. Se un numero è vuoto non vuol dire zero: sotto una certa soglia OpenAI non lo mostra.</p>
+      </section>
+
+      <section id="attenzione">
+        <span class="num">06</span>
+        <h2>Cosa non fa, e a cosa stare attenti</h2>
+        <ul>
+          <li><strong>Non ti fa consigliare di più.</strong> OpenAI scrive che rivendicare la scheda non garantisce più visibilità e che la pubblicità non cambia le risposte di ChatGPT. Diffida di chi ti promette «primo su ChatGPT».</li>
+          <li><strong>Le modifiche non sono immediate</strong> e ChatGPT può continuare a usare anche altre fonti: per questo i dati uguali ovunque contano più della scheda.</li>
+          <li><strong>Una scheda pubblicata non si cancella.</strong> Si possono eliminare solo le bozze mai pubblicate.</li>
+          <li><strong>Una sede alla volta.</strong> Non c'è una gestione unica per più marchi o più punti vendita: ogni sede va rivendicata a parte.</li>
+          <li><strong>Leggi le condizioni</strong> prima di rivendicare: riguardano anche l'uso dei dati che inserisci. Le trovi sul <a href="https://openai.com/policies/businesses-in-chatgpt-terms/" rel="noopener">sito di OpenAI</a>, in inglese.</li>
+        </ul>
+      </section>
+
+      <section id="domande">
+        <span class="num">07</span>
+        <h2>Domande frequenti</h2>
+        <details><summary>Quanto costa?</summary><p>Per ora niente: rivendicare e gestire la scheda è gratis. È una funzione in prova, quindi le condizioni possono cambiare.</p></details>
+        <details><summary>Devo fare pubblicità su ChatGPT?</summary><p>No. Scheda, pubblicità e assistente sono cose separate: puoi gestire la scheda senza spendere nulla.</p></details>
+        <details><summary>Ho già la scheda Google: basta quella?</summary><p>È un'ottima base, ma OpenAI non dice da quali fonti prende i dati delle attività locali. Avere gli stessi dati su sito, scheda Google e directory è il modo più sicuro per non lasciare informazioni sbagliate in giro.</p></details>
+        <details><summary>Posso farla gestire a qualcun altro?</summary><p>Sì. Chi ha rivendicato la scheda può aggiungere collaboratori o dare accesso a un'agenzia, ognuno con il proprio account ChatGPT.</p></details>
+        <details><summary>Quando arriverà per le attività italiane con una sede?</summary><p>OpenAI non ha dato una data. Se ti iscrivi alla lista d'attesa qui sotto, ti scriviamo appena cambia qualcosa.</p></details>
+        <details><summary>Qualcuno ha già rivendicato la mia attività. Cosa faccio?</summary><p>Dal profilo, menu «•••», scegli «Dispute ownership» e dimostra con Persona che sei autorizzato a rappresentare l'attività.</p></details>
+      </section>
+    </article>
+  </div>
+
+  <section class="attesa" id="lista" aria-labelledby="titolo-lista">
+    <div class="testo">
+      <p class="eyebrow">Lista d'attesa</p>
+      <h2 id="titolo-lista">Ti avvisiamo quando si può fare in Italia.</h2>
+      <p>Appena le attività italiane potranno rivendicare la scheda ti mandiamo un'email con i passi aggiornati. Se vuoi, ci pensiamo noi.</p>
+      <ul>
+        <li>Gratis, una sola email quando cambia qualcosa.</li>
+        <li>Niente newsletter e niente dati ceduti ad altri.</li>
+        <li>Ti cancelli quando vuoi rispondendo all'email.</li>
+      </ul>
+    </div>
+    <div>
+      <form id="form" novalidate>
+        <label class="campo">Nome e cognome
+          <input type="text" name="nome" autocomplete="name" required maxlength="80">
+        </label>
+        <label class="campo">Email
+          <input type="email" name="email" autocomplete="email" required maxlength="120" placeholder="nome@esempio.it">
+        </label>
+        <label class="campo">Nome dell'attività
+          <input type="text" name="attivita" autocomplete="organization" required maxlength="120">
+        </label>
+        <label class="campo">Città
+          <input type="text" name="citta" autocomplete="address-level2" required maxlength="80">
+        </label>
+        <label class="campo intero">Cellulare <small>facoltativo, se preferisci WhatsApp</small>
+          <input type="tel" name="telefono" autocomplete="tel" inputmode="tel" maxlength="30" placeholder="333 123 4567">
+        </label>
+        <fieldset class="intero">
+          <legend>La tua attività <small style="font-weight:400;color:var(--ink-soft)">(negozio, locale, studio o solo sito)</small></legend>
+          <div class="scelte">
+            <label class="scelta"><input type="radio" name="sede" value="locale" checked><span>Ha una sede</span></label>
+            <label class="scelta"><input type="radio" name="sede" value="online"><span>È solo online</span></label>
+          </div>
+        </fieldset>
+        <label class="consenso intero">
+          <input type="checkbox" name="aiuto">
+          <span><strong>Vorrei che la attivaste voi.</strong> Facoltativo: ti ricontattiamo quando sarà possibile.</span>
+        </label>
+        <label class="consenso intero">
+          <input type="checkbox" name="consenso" required>
+          <span><strong>Acconsento a essere ricontattato da MixDigital via email (e, se ho lasciato il numero, su WhatsApp o per telefono) per sapere quando le schede delle attività su ChatGPT saranno disponibili in Italia e per informazioni sui servizi di MixDigital.</strong> Obbligatorio. <a href="../privacy.html#lista-chatgpt">Privacy</a></span>
+        </label>
+        <div class="trappola" aria-hidden="true"><label>Non compilare <input type="text" name="sito_web" tabindex="-1" autocomplete="off"></label></div>
+        <p class="messaggio intero" id="messaggio" role="alert"></p>
+        <div class="intero"><button class="btn" type="submit">Avvisatemi</button></div>
+      </form>
+      <div class="fatto-box" id="fatto" hidden tabindex="-1">
+        <h3>Fatto, sei in lista.</h3>
+        <p id="fatto-testo">Ti scriviamo appena le attività italiane potranno rivendicare la scheda su ChatGPT.</p>
+        <p>Intanto puoi fare la <a href="#prova">prova delle domande</a> e sistemare i tuoi dati con la <a href="#prepararsi">lista qui sopra</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <p class="nota">Fonti: <a href="https://help.openai.com/en/articles/20001635-setting-up-your-business-on-chatgpt" rel="noopener">Setting up your business on ChatGPT</a> (centro assistenza di OpenAI) e <a href="https://openai.com/index/introducing-businesses-chatgpt/" rel="noopener">l'annuncio di OpenAI</a>, letti il 12 novembre 2026. MixDigital non ha legami con OpenAI; ChatGPT è un marchio di OpenAI. La funzione è in prova e può cambiare: controlla sempre la guida ufficiale.</p>
+
+  <footer>
+    <span>© 2026 MixDigital · siti su misura in tutta Italia</span>
+    <span><a href="../privacy.html">Privacy</a> · nessun cookie</span>
+  </footer>
+</div>
+
+<script>
+(() => {
+  // Domande da copiare: si compilano con i dati scritti dal visitatore (restano nel browser).
+  const campi = { nome: document.getElementById("p-nome"), citta: document.getElementById("p-citta"), tipo: document.getElementById("p-tipo") };
+  const segnaposto = { nome: "[nome attività]", citta: "[città]", tipo: "[tipo di attività]" };
+  const domande = [...document.querySelectorAll("#domande q")];
+
+  function testo(modello) {
+    return modello.replace(/\{(nome|citta|tipo)\}/g, (_, k) => campi[k].value.trim() || segnaposto[k]);
+  }
+  function disegna() {
+    for (const q of domande) {
+      q.replaceChildren();
+      for (const pezzo of q.dataset.modello.split(/(\{nome\}|\{citta\}|\{tipo\})/)) {
+        const k = /^\{(nome|citta|tipo)\}$/.exec(pezzo)?.[1];
+        if (!k) { q.append(pezzo); continue; }
+        const b = document.createElement("b");
+        b.textContent = campi[k].value.trim() || segnaposto[k];
+        q.append(b);
+      }
+    }
+  }
+  for (const c of Object.values(campi)) c.addEventListener("input", disegna);
+  disegna();
+
+  document.getElementById("domande").addEventListener("click", async (ev) => {
+    const bottone = ev.target.closest(".copia");
+    if (!bottone) return;
+    const q = bottone.parentElement.querySelector("q");
+    const t = testo(q.dataset.modello);
+    try {
+      await navigator.clipboard.writeText(t);
+    } catch {
+      const area = document.createElement("textarea");
+      area.value = t; document.body.append(area); area.select();
+      try { document.execCommand("copy"); } catch {}
+      area.remove();
+    }
+    bottone.textContent = "Copiata";
+    bottone.classList.add("fatto");
+    setTimeout(() => { bottone.textContent = "Copia"; bottone.classList.remove("fatto"); }, 1800);
+  });
+
+  // Voce attiva nell'indice mentre si scorre.
+  const voci = new Map([...document.querySelectorAll(".indice a")].map((a) => [a.getAttribute("href").slice(1), a]));
+  if ("IntersectionObserver" in window) {
+    const oss = new IntersectionObserver((entrate) => {
+      for (const e of entrate) {
+        if (!e.isIntersecting) continue;
+        for (const a of voci.values()) a.classList.remove("attiva");
+        voci.get(e.target.id)?.classList.add("attiva");
+      }
+    }, { rootMargin: "-30% 0px -60% 0px" });
+    for (const id of voci.keys()) { const s = document.getElementById(id); if (s) oss.observe(s); }
+  }
+})();
+
+(() => {
+  // Lista d'attesa: i dati vanno al server di MixDigital (lo stesso della demo WhatsApp).
+  const LOCALE = location.hostname === "localhost" || location.hostname === "127.0.0.1";
+  const API = LOCALE ? "http://localhost:8787" : "https://assistente.mixdigital.it";
+  const form = document.getElementById("form");
+  const messaggio = document.getElementById("messaggio");
+  const invia = form.querySelector("button[type=submit]");
+
+  function errore(t, campo) {
+    messaggio.className = "messaggio intero errore";
+    messaggio.textContent = t;
+    campo?.focus();
+  }
+
+  form.addEventListener("submit", async (ev) => {
+    ev.preventDefault();
+    messaggio.className = "messaggio intero";
+    messaggio.textContent = "";
+    const dati = Object.fromEntries(new FormData(form));
+    dati.aiuto = form.aiuto.checked;
+    dati.consenso = form.consenso.checked;
+    const mancanti = ["nome", "email", "attivita", "citta"].filter((k) => !String(dati[k] ?? "").trim());
+    if (mancanti.length) return errore("Scrivi il tuo nome, l'email, il nome dell'attività e la città.", form[mancanti[0]]);
+    if (!/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(String(dati.email).trim())) return errore("L'indirizzo email non sembra giusto.", form.email);
+    if (!dati.consenso) return errore("Per avvisarti serve il consenso a essere ricontattato.", form.consenso);
+
+    invia.disabled = true;
+    invia.textContent = "Un attimo…";
+    try {
+      const r = await fetch(`${API}/lista-attesa`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(dati) });
+      const corpo = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error(corpo.errore || "Non siamo riusciti a iscriverti.");
+      const online = dati.sede === "online";
+      document.getElementById("fatto-testo").textContent = corpo.gia
+        ? "Eri già in lista con questa attività: ti scriviamo appena cambia qualcosa."
+        : online
+          ? "Ti scriviamo appena cambia qualcosa. La tua attività è online: puoi già provare a rivendicarla oggi dal Business Hub di ChatGPT, con i passi della sezione 5."
+          : "Ti scriviamo appena le attività italiane potranno rivendicare la scheda su ChatGPT.";
+      form.hidden = true;
+      const fatto = document.getElementById("fatto");
+      fatto.hidden = false;
+      fatto.focus();
+    } catch (err) {
+      errore(`${err.message === "Failed to fetch" ? "Il collegamento non è riuscito." : err.message} Se il problema resta, scrivici a info@mixdigital.it.`);
+    } finally {
+      invia.disabled = false;
+      invia.textContent = "Avvisatemi";
+    }
+  });
+})();
+</script>
+</body>
+</html>
